@@ -1,0 +1,235 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 8px;
+    background-color: #ffffff38;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+/* Navbar logo styling */
+.nav-logo img {
+    width: 90px;
+    height: 80px;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+.nav-logo h1 {
+    margin-left: 10px;
+}
+
+/* Body padding to prevent content from being hidden behind the navbar */
+body {
+    padding-top: 50px;
+}
+
+/* Center the header both horizontally and vertically */
+.header {
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Carousel Container styling */
+.carousel-container {
+    display: flex;
+    max-width: 90%;
+    margin: 60px auto 20px auto;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+/* Carousel styling */
+.carousel {
+    position: relative;
+    flex: 1;
+    max-width: 70%;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 750px;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-item { 
+    min-width: 100%; 
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+.image-container {
+    width: 60%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: unset;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+
+/* Sidebar styling */
+.sidebar {
+    flex-basis: 30%;
+}
+.sidebar a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: #ffffff53;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    width: 200px;
+    text-align: center;
+}
+.sidebar a:hover {
+    background-color: #60e66255;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sidebar li img {
+    width: 70px; 
+    height: 70px;
+    margin-right: 15px; /* Ensure space between icon and text */
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.popup h3 {
+    text-align: left;
+}
+.popup p {
+    text-align: justify;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.popup-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.popup-button {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    width: 20% !important;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px !important;
+}
+.popup-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .carousel {
+        max-width: 100%;
+        margin: 0 0 20px 0;
+        height: auto; /* Adjust height to fit content */
+    }
+    .sidebar {
+        width: 100%;
+        max-width: 400px; /* Adjust to fit small screens */
+        margin-top: 20px;
+    }
+    .sidebar li {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .sidebar li img {
+        margin-right: 10px; /* Ensure space between icon and text */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar li {
+        flex-direction: row;
+        align-items: center;
+    }
+    .sidebar li img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+}
